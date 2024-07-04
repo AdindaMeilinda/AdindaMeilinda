@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Janji Jiwa Coffee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: tomato;
+            margin: 0;
+            padding: 0;
+        }
+        #header { 
+            width: 980px;
+            height: 300px;
+            background-color: #663300;
+            color: #fff;
+            background-image: url(img/Janjiw.jpg);
+            background-size: 100% 100%;
+            text-align: right;
+            margin: 0 auto;
+        }
+        #container{
+            width: 980px;
+            background-color: #fff;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        nav {
+            background-color: #996633;
+            padding: 10px;
+            text-align: left;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .contact-info {
+            margin-top: 20px;
+        }
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Janji Jiwa Coffee</h1>
+    </div>
+    <div id="container">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="About.html">About Us</a>
+            <a href="Contact.html">Contact</a>
+            <span>
+                <script>
+                    document.write("Hello, have a great day, " + visiter);
+                </script>
+            </span>
+        </nav>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p><strong>Address:</strong> Jl. Kenangan Indah No. 123, Jakarta</p>
+                <p><strong>Phone:</strong> +62 123 456789</p>
+                <p><strong>Email:</strong> info@janjijiwa.com</p>
+            </div>
+            <div id="map" style="height: 400px; margin-top: 20px;"></div>
+        </section>
+    </div>
+
+    <div id="footer">
+        <p>&copy; Adinda Meilinda (231011750018)</p>
+    </div>
+
+    <!-- Google Maps API -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of Janji Jiwa Coffee
+            var janjiJiwa = {lat: -6.2088, lng: 106.8456};
+            // The map, centered at Janji Jiwa Coffee
+            var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 15, center: janjiJiwa});
+            // The marker, positioned at Janji Jiwa Coffee
+            var marker = new google.maps.Marker({position: janjiJiwa, map: map});
+        }
+    </script>
+
+</body>
+</html>
